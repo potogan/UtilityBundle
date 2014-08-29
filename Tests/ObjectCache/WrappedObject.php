@@ -9,67 +9,62 @@ class WrappedObject
     protected $counter = 0;
 
     /**
-	 * @CAC\Cache
-	 */
+     * @CAC\Cache
+     */
     public function getCounter()
     {
         return ++$this->counter;
     }
 
     /**
-	 * @CAC\ClearMethodCache("getCounter")
-	 */
+     * @CAC\ClearMethodCache("getCounter")
+     */
     public function clearCounterCache()
     {
-
     }
 
     /**
-	 * @CAC\Cache("testscope")
-	 */
+     * @CAC\Cache("testscope")
+     */
     public function testscopeMethod1()
     {
         return rand();
     }
 
     /**
-	 * @CAC\Cache("testscope")
-	 */
+     * @CAC\Cache("testscope")
+     */
     public function testscopeMethod2()
     {
         return rand();
     }
 
     /**
-	 * @CAC\ClearScopeCache("testscope")
-	 */
+     * @CAC\ClearScopeCache("testscope")
+     */
     public function clearTestscope()
     {
-
     }
 
     /**
-	 * @CAC\ClearCache()
-	 */
+     * @CAC\ClearCache()
+     */
     public function clearAllCaches()
     {
-
     }
 
     /**
-	 * @CAC\Cache("testscope")
-	 */
+     * @CAC\Cache("testscope")
+     */
     public function getParameter($name)
     {
         return rand();
     }
 
     /**
-	 * @CAC\ClearMethodEntryCache("getParameter", parameters = {0})
-	 */
+     * @CAC\ClearMethodEntryCache("getParameter", parameters = {0})
+     */
     public function clearParameterCache($name, $value)
     {
-
     }
-
 }

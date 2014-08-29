@@ -21,8 +21,8 @@ class ObjectWrapperTest extends WebTestCase
     }
 
     /**
-	 * @depends testInstanciation
-	 */
+     * @depends testInstanciation
+     */
     public function testSimpleCache($instance)
     {
         $value = $instance->getCounter();
@@ -31,8 +31,8 @@ class ObjectWrapperTest extends WebTestCase
     }
 
     /**
-	 * @depends testInstanciation
-	 */
+     * @depends testInstanciation
+     */
     public function testMethodClearCache($instance)
     {
         $value = $instance->getCounter();
@@ -43,8 +43,8 @@ class ObjectWrapperTest extends WebTestCase
     }
 
     /**
-	 * @depends testInstanciation
-	 */
+     * @depends testInstanciation
+     */
     public function testScopeClearCache($instance)
     {
         $value1 = $instance->testscopeMethod1();
@@ -57,8 +57,8 @@ class ObjectWrapperTest extends WebTestCase
     }
 
     /**
-	 * @depends testInstanciation
-	 */
+     * @depends testInstanciation
+     */
     public function testClearAllCache($instance)
     {
         $value1 = $instance->getCounter();
@@ -71,8 +71,8 @@ class ObjectWrapperTest extends WebTestCase
     }
 
     /**
-	 * @depends testInstanciation
-	 */
+     * @depends testInstanciation
+     */
     public function testClearMethodEntryCache($instance)
     {
         $value1 = $instance->getParameter('param1');
@@ -85,9 +85,9 @@ class ObjectWrapperTest extends WebTestCase
     }
 
     /**
-	 * @depends testInstanciation
-	 * @expectedException PHPUnit_Framework_Error_Warning
-	 */
+     * @depends testInstanciation
+     * @expectedException PHPUnit_Framework_Error_Warning
+     */
     public function testCallUnexistingMethod($instance)
     {
         $instance->iLoledHard();

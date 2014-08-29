@@ -9,7 +9,7 @@ namespace Potogan\UtilityBundle\ObjectCache\Annotations;
 class ClearMethodEntryCache extends ClearCache
 {
     /**
-	 * @var array<int>
-	 */
+     * @var array<int>
+     */
     public $parameters = array();
 }
