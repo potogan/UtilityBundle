@@ -1,30 +1,33 @@
 <?php
+
 namespace Potogan\UtilityBundle\CSV;
 
 use Potogan\UtilityBundle\CSV\Exception\WrongColumnCountException;
 
-class NamedCSVIterator extends CSVIterator {
-	protected $columns;
+class NamedCSVIterator extends CSVIterator
+{
+    protected $columns;
 
-	public function setColumns($columns)
-	{
-		$this->columns = $columns;
+    public function setColumns($columns)
+    {
+        $this->columns = $columns;
 
-		return $this;
-	}
+        return $this;
+    }
 
-	public function current()
-	{
-		$res = parent::current();
-		if ($this->columns) {
-			if (count($this->columns) != count($res)) {
-				throw new WrongColumnCountException(count($this->columns), $res);
-			}
+    public function current()
+    {
+        $res = parent::current();
 
-			$res = array_combine($this->columns, $res);
-		}
+        if ($this->columns) {
+            if (count($this->columns) != count($res)) {
+                throw new WrongColumnCountException(count($this->columns), $res);
+            }
 
-		return $res;
-	}
+            $res = array_combine($this->columns, $res);
+        }
+
+        return $res;
+    }
 
 }

@@ -1,13 +1,15 @@
 <?php
+
 namespace Potogan\UtilityBundle\ObjectCache\Annotations;
 
 /**
  * @Annotation
  * @Target({"METHOD"})
  */
-class ClearMethodEntryCache extends ClearCache {
-	/**
+class ClearMethodEntryCache extends ClearCache
+{
+    /**
 	 * @var array<int>
 	 */
-	public $parameters = array();
+    public $parameters = array();
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\UtilityBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;

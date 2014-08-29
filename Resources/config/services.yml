@@ -1,6 +1,4 @@
-
 services:
-
     potogan_utility.hostconfig:
         class: Potogan\UtilityBundle\HostConfig\Service
         arguments:

@@ -1,9 +1,11 @@
 <?php
+
 namespace Potogan\UtilityBundle\ObjectCache\Annotations;
 
 /**
  * @Annotation
  * @Target({"METHOD"})
  */
-class ClearScopeCache extends ClearCache {
+class ClearScopeCache extends ClearCache
+{
 }

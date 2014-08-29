@@ -1,32 +1,32 @@
 <?php
+
 namespace Potogan\UtilityBundle\CSV;
 
-abstract class AbstractCSVOptions {
-	protected $delimiter = ',';
-	protected $enclosure = '"';
-	protected $escape    = '\\';
+abstract class AbstractCSVOptions
+{
+    protected $delimiter = ',';
+    protected $enclosure = '"';
+    protected $escape    = '\\';
 
+    public function setDelimiter($delimiter)
+    {
+        $this->delimiter = $delimiter;
 
-	// option setters
-	public function setDelimiter($delimiter)
-	{
-		$this->delimiter = $delimiter;
+        return $this;
+    }
 
-		return $this;
-	}
+    public function setEnclosure($enclosure)
+    {
+        $this->enclosure = $enclosure;
 
-	public function setEnclosure($enclosure)
-	{
-		$this->enclosure = $enclosure;
+        return $this;
+    }
 
-		return $this;
-	}
+    public function setEscape($escape)
+    {
+        $this->escape = $escape;
 
-	public function setEscape($escape)
-	{
-		$this->escape = $escape;
-
-		return $this;
-	}
+        return $this;
+    }
 
 }
