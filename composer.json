@@ -1,0 +1,16 @@
+{
+    "name": "potogan/utility-bundle",
+    "description": "Symfony utility bundle",
+    "authors": [
+        {
+            "name": "Pierre Dudoret",
+            "email": "pierre.dudoret@potogan.fr"
+        }
+    ],
+    "require": {
+	"php": ">=5.3.*"
+    },
+    "autoload": {
+        "psr-4":  { "Potogan\\UtilityBundle\\": "" }
+    }
+}
