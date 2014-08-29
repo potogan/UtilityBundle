@@ -33,69 +33,69 @@ namespace Potogan\UtilityBundle;
 class Paginator
 {
     /**
-	 * Current page pointer
-	 * the value will not be checked against page number, so it has to be set BEFORE ->calc
-	 * @access protected
-	 * @var int
-	 */
+     * Current page pointer
+     * the value will not be checked against page number, so it has to be set BEFORE ->calc
+     * @access protected
+     * @var int
+     */
     protected $pointer = 0;
 
     /**
-	 * Maximum results displayed on a page
-	 * @access protected
-	 * @var int
-	 */
+     * Maximum results displayed on a page
+     * @access protected
+     * @var int
+     */
     protected $resPerPage = 5;
 
     /**
-	 * Result pages count
-	 * @access protected
-	 * @var int
-	 */
+     * Result pages count
+     * @access protected
+     * @var int
+     */
     protected $pages = 1;
 
     /**
-	 * Maximum displayed page pointers
-	 * @access protected
-	 * @var int
-	 */
+     * Maximum displayed page pointers
+     * @access protected
+     * @var int
+     */
     protected $maxPages = 0;
 
     /**
-	 * Result count
-	 * @access protected
-	 * @var int
-	 */
+     * Result count
+     * @access protected
+     * @var int
+     */
     protected $count = 0;
 
     /**
-	 * SQL Limit
-	 * @access protected
-	 * @var string
-	 */
+     * SQL Limit
+     * @access protected
+     * @var string
+     */
     protected $limit = null;
     protected $limit_start;
     protected $limit_count;
 
     /**
-	 * Displayabled result list : The paginator object can be used as a result container
-	 * @access protected
-	 * @var array
-	 */
+     * Displayabled result list : The paginator object can be used as a result container
+     * @access protected
+     * @var array
+     */
     protected $results = array();
 
     /**
-	 * Callback used to generate page links
-	 * @access protected
-	 * @var array
-	 */
+     * Callback used to generate page links
+     * @access protected
+     * @var array
+     */
     protected $buildLinkCallback = array();
 
     /**
-	 * Callback used to generate alternate page links
-	 * @access protected
-	 * @var array
-	 */
+     * Callback used to generate alternate page links
+     * @access protected
+     * @var array
+     */
     protected $buildAlternateLinkCallback = array();
 
     public function __construct($opts = array())
@@ -106,13 +106,13 @@ class Paginator
     }
 
     /**
-	 * Read-only property accessor
-	 *
-	 * @param string $name = property name
-	 *
-	 * @access public
-	 * @return mixed
-	 */
+     * Read-only property accessor
+     *
+     * @param string $name = property name
+     *
+     * @access public
+     * @return mixed
+     */
     public function __get($name)
     {
         if (isset($this->$name)) {
@@ -123,13 +123,13 @@ class Paginator
     }
 
     /**
-	 * Write property accessor
-	 *
-	 * @param string $name = property name
-	 *
-	 * @access public
-	 * @return mixed
-	 */
+     * Write property accessor
+     *
+     * @param string $name = property name
+     *
+     * @access public
+     * @return mixed
+     */
     public function __set($name, $value)
     {
         $intval = array('resPerPage', 'maxPages', 'pointer');
@@ -145,13 +145,13 @@ class Paginator
     }
 
     /**
-	 * Calculate pagination infos
-	 *
-	 * @param int $count = total result count
-	 *
-	 * @access public
-	 * @return void
-	 */
+     * Calculate pagination infos
+     *
+     * @param int $count = total result count
+     *
+     * @access public
+     * @return void
+     */
     public function calc($count)
     {
         if ($count) {
@@ -168,11 +168,11 @@ class Paginator
     }
 
     /**
-	 * Pagination builder
-	 *
-	 * @access public
-	 * @return object
-	 */
+     * Pagination builder
+     *
+     * @access public
+     * @return object
+     */
     public function build()
     {
         $res = (object) array(
@@ -226,13 +226,13 @@ class Paginator
     }
 
     /**
-	 * Build a single pagelink object
-	 *
-	 * @param int $num = page number
-	 *
-	 * @access protected
-	 * @return object
-	 */
+     * Build a single pagelink object
+     *
+     * @param int $num = page number
+     *
+     * @access protected
+     * @return object
+     */
     protected function buildPageObject($num)
     {
         $res = (object) array(
