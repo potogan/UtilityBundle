@@ -2,5 +2,5 @@ services:
     potogan_utility.hostconfig:
         class: Potogan\UtilityBundle\HostConfig\Service
         arguments:
-            - @service_container
-            - %potogan.utility.hostconfig%
+            - "@service_container"
+            - "%potogan.utility.hostconfig%"
